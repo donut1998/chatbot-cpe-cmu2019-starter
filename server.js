@@ -28,11 +28,13 @@ app.post('/webhook', middleware(config), (req, res) => {
     //   // text: message.text
     //   text: message.type
     // })
-    client.replyMessage(event.replyToken, 
-      {
-        "type": "template",
-        "altText": "This is a buttons template",
-        "template": {
+
+
+    // client.replyMessage(event.replyToken, 
+    //   {
+    //     "type": "template",
+    //     "altText": "This is a buttons template",
+    //     "template": {
             // "type": "buttons",
             // "thumbnailImageUrl": "https://brayadownloadmovieonline.files.wordpress.com/2018/12/dragon-ball-super-broly-poster.jpg",
             // "imageAspectRatio": "rectangle",
@@ -72,6 +74,7 @@ app.post('/webhook', middleware(config), (req, res) => {
             //     // }
             // ]
             //----------------------------------------------------------//------------ muli templete
+
             client.replyMessage(event.replyToken, {
               "type": "template",
               "altText": "this is a carousel template",
@@ -120,6 +123,7 @@ app.post('/webhook', middleware(config), (req, res) => {
                   "imageSize": "cover"
               }
           })
+            
             
         }
       })
