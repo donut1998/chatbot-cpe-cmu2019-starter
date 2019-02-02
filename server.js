@@ -49,25 +49,27 @@ app.post('/webhook', middleware(config), (req, res) => {
                 {
                   // "type": "postback",
                   "type": "message",
-                  "label": "Dokkan",
+                  "label": "Facebook",
                   // "data": "action=buy&itemid=123"
-                  "text": "Game"
+                  //"text": "Game"
+                  "uri": "https://www.facebook.com/profile.php?id=100008681733666"
                 },
                 {
                   "type": "message",
-                  "label": "Add to cart",
-                  "text": "no no no"
-                },
-                {
-                  "type": "message",
-                  "label": "Fusion",
-                  "text": "HA"
-                },
-                {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://google.com"
+                  "label": "วิศวะคอม",
+                  // "text": "no no no"
+                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
                 }
+                // {
+                //   "type": "message",
+                //   "label": "Fusion",
+                //   "text": "HA"
+                // },
+                // {
+                //   "type": "uri",
+                //   "label": "View detail",
+                //   "uri": "http://google.com"
+                // }
             ]
         }
       })
