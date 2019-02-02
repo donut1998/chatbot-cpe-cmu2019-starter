@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
     res.send('Hello World!!')
 })
 app.get('/webhook', middleware(config), (req, res) => {
- console.log('webhook success')
+  res.send('Hello World!!')
 })
 
 app.set('port', (process.env.PORT || 4000))
