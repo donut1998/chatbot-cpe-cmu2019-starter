@@ -59,6 +59,11 @@ app.post('/webhook', middleware(config), (req, res) => {
                   "text": "no no no"
                 },
                 {
+                  "type": "message",
+                  "label": "Fusion",
+                  "text": "HA"
+                },
+                {
                   "type": "uri",
                   "label": "View detail",
                   "uri": "http://google.com"
