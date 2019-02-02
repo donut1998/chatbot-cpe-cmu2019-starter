@@ -122,15 +122,12 @@ app.post('/webhook', middleware(config), (req, res) => {
                   "imageAspectRatio": "rectangle",
                   "imageSize": "cover"
               }
-          })
-            
-            
-        }
-      })
-
-    
+    })
   }
 })
+          
+            
+
 
 app.set('port', (process.env.PORT || 4000))
 
