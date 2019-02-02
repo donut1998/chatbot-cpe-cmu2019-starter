@@ -48,17 +48,17 @@ app.post('/webhook', middleware(config), (req, res) => {
             "actions": [
                 {
                   // "type": "postback",
-                  "type": "message",
+                  "type": "uri",
                   "label": "Facebook",
                   // "data": "action=buy&itemid=123"
                   //"text": "Game"
                   "uri": "https://www.facebook.com/profile.php?id=100008681733666"
                 },
                 {
-                  "type": "message",
+                  "type": "uri",
                   "label": "วิศวะคอม",
                   // "text": "no no no"
-                  // "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                   "uri": "http://cpe.eng.cmu.ac.th/2013/"
                 }
                 // {
                 //   "type": "message",
