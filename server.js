@@ -7,10 +7,10 @@ const config = {
   channelSecret: '1614fdc372087e9c6a6fc36829fad2f2'
 }
 
-app.get('/', function (req, res) {
+app.get('/webhook', function (req, res) {
     res.send('Hello World!!')
 })
-app.get('/webhook', middleware(config), (req, res) => {
+app.post('/webhook', middleware(config), (req, res) => {
   res.send('Hello World!!')
 })
 
