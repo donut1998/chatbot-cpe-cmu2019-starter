@@ -33,44 +33,110 @@ app.post('/webhook', middleware(config), (req, res) => {
         "type": "template",
         "altText": "This is a buttons template",
         "template": {
-            "type": "buttons",
-            "thumbnailImageUrl": "https://brayadownloadmovieonline.files.wordpress.com/2018/12/dragon-ball-super-broly-poster.jpg",
-            "imageAspectRatio": "rectangle",
-            "imageSize": "cover",
+            // "type": "buttons",
+            // "thumbnailImageUrl": "https://brayadownloadmovieonline.files.wordpress.com/2018/12/dragon-ball-super-broly-poster.jpg",
+            // "imageAspectRatio": "rectangle",
+            // "imageSize": "cover",
+            // "imageBackgroundColor": "#FFFFFF",
+            // "title": "DONUT",
+            // "text": "PAtcharawat Sukruk",
+            // "defaultAction": {
+            //     "type": "uri",
+            //     "label": "View detail",
+            //     "uri": "https://dbz-dokkanbattle.fandom.com/wiki/Dragon_Ball_Z_Dokkan_Battle_Wikia"
+            // },
+            // "actions": [
+            //     {
+            //       // "type": "postback",
+            //       "type": "uri",
+            //       "label": "Facebook",
+            //       // "data": "action=buy&itemid=123"
+            //       //"text": "Game"
+            //       "uri": "https://www.facebook.com/profile.php?id=100008681733666"
+            //     },
+            //     {
+            //       "type": "uri",
+            //       "label": "วิศวะคอม",
+            //       // "text": "no no no"
+            //        "uri": "http://cpe.eng.cmu.ac.th/2013/"
+            //     }
+            //     // {
+            //     //   "type": "message",
+            //     //   "label": "Fusion",
+            //     //   "text": "HA"
+            //     // },
+            //     // {
+            //     //   "type": "uri",
+            //     //   "label": "View detail",
+            //     //   "uri": "http://google.com"
+            //     // }
+            // ]
+            //----------------------------------------------------------//------------
+            "altText": "this is a carousel template",
+  "template": {
+      "type": "carousel",
+      "columns": [
+          {
+            "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "DONUT",
-            "text": "PAtcharawat Sukruk",
+            "title": "this is menu",
+            "text": "description",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
-                "uri": "https://dbz-dokkanbattle.fandom.com/wiki/Dragon_Ball_Z_Dokkan_Battle_Wikia"
+                "uri": "http://example.com/page/123"
             },
             "actions": [
                 {
-                  // "type": "postback",
-                  "type": "uri",
-                  "label": "Facebook",
-                  // "data": "action=buy&itemid=123"
-                  //"text": "Game"
-                  "uri": "https://www.facebook.com/profile.php?id=100008681733666"
+                    "type": "postback",
+                    "label": "Buy",
+                    "data": "action=buy&itemid=111"
                 },
                 {
-                  "type": "uri",
-                  "label": "วิศวะคอม",
-                  // "text": "no no no"
-                   "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                    "type": "postback",
+                    "label": "Add to cart",
+                    "data": "action=add&itemid=111"
+                },
+                {
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "http://example.com/page/111"
                 }
-                // {
-                //   "type": "message",
-                //   "label": "Fusion",
-                //   "text": "HA"
-                // },
-                // {
-                //   "type": "uri",
-                //   "label": "View detail",
-                //   "uri": "http://google.com"
-                // }
             ]
+          },
+          {
+            "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
+            "imageBackgroundColor": "#000000",
+            "title": "this is menu",
+            "text": "description",
+            "defaultAction": {
+                "type": "uri",
+                "label": "View detail",
+                "uri": "http://example.com/page/222"
+            },
+            "actions": [
+                {
+                    "type": "postback",
+                    "label": "Buy",
+                    "data": "action=buy&itemid=222"
+                },
+                {
+                    "type": "postback",
+                    "label": "Add to cart",
+                    "data": "action=add&itemid=222"
+                },
+                {
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "http://example.com/page/222"
+                }
+            ]
+          }
+      ],
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover"
+  }
+}
         }
       })
 
