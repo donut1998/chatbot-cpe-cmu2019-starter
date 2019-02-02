@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
-  res.send('Hello World!!')
+  res.send('World!!')
   const event = req.body.events[0];
     
   if (event.type === 'message') {
