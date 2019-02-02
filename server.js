@@ -1,6 +1,7 @@
 const express = require('express')
 const middleware = require('@line/bot-sdk').middleware
 const app = express()
+const client = require('@line/bot-sdk').Client
 
 const config = {
   channelAccessToken: 'hQWQDyh2yengS8JSCPVb5JZZj+KhRuVHvRCL+W9XVNJnuvbwphLneuu3bcOz4UOOzSc1RSd8ZCqh9wq5dvGZvckSr3fxl50LBLV981Q4S4gVyQ67WGwFpFRq+PLSbk3GrgpCt5OKn+aPGmYo16KNRAdB04t89/1O/w1cDnyilFU=',
