@@ -38,8 +38,8 @@ app.post('/webhook', middleware(config), (req, res) => {
             "imageAspectRatio": "rectangle",
             "imageSize": "cover",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "เมนูู",
-            "text": "โปรดเลือก",
+            "title": "Menu",
+            "text": "Please select",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
@@ -48,23 +48,24 @@ app.post('/webhook', middleware(config), (req, res) => {
             "actions": [
                 {
                   "type": "postback",
-                  "label": "ซื้อ",
-                  // "data": "action=buy&itemid=123"
-                  "text": "Yes"
+                  "label": "Buy",
+                  "data": "action=buy&itemid=123"
                 },
                 {
                   "type": "message",
-                  "label": "เพิ่มเข้ารถเข็น",
+                  "label": "Add to cart",
                   "text": "no no no"
                 },
                 {
                   "type": "uri",
-                  "label": "รายละเอียด",
+                  "label": "View detail",
                   "uri": "http://google.com"
                 }
             ]
         }
-      })    
+      })
+
+    
   }
 })
 
