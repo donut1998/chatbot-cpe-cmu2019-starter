@@ -34,22 +34,24 @@ app.post('/webhook', middleware(config), (req, res) => {
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+            "thumbnailImageUrl": "https://brayadownloadmovieonline.files.wordpress.com/2018/12/dragon-ball-super-broly-poster.jpg",
             "imageAspectRatio": "rectangle",
             "imageSize": "cover",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "Menu",
-            "text": "Please select",
+            "title": "DONUT",
+            "text": "PAtcharawat Sukruk",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
-                "uri": "http://google.com/"
+                "uri": "https://dbz-dokkanbattle.fandom.com/wiki/Dragon_Ball_Z_Dokkan_Battle_Wikia"
             },
             "actions": [
                 {
-                  "type": "postback",
-                  "label": "Buy",
-                  "data": "action=buy&itemid=123"
+                  // "type": "postback",
+                  "type": "message",
+                  "label": "Dokkan",
+                  // "data": "action=buy&itemid=123"
+                  "text": "Game"
                 },
                 {
                   "type": "message",
