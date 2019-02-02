@@ -58,7 +58,7 @@ app.post('/webhook', middleware(config), (req, res) => {
                   "type": "message",
                   "label": "วิศวะคอม",
                   // "text": "no no no"
-                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                  // "uri": "http://cpe.eng.cmu.ac.th/2013/"
                 }
                 // {
                 //   "type": "message",
