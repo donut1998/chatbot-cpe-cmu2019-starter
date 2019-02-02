@@ -18,7 +18,6 @@ app.get('/', function (req, res) {
 app.post('/webhook', middleware(config), (req, res) => {
   res.send('hello!!')
   const event = req.body.events[0]; //เก็บข้อความ,สติ๊กเกอร์
-  text: event.type
   if (event.type === 'message') {
     const message = event.message;
     console.log(message)
