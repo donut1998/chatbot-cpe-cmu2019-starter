@@ -20,7 +20,8 @@ app.post('/webhook', middleware(config), (req, res) => {
   const event = req.body.events[0]; //เก็บข้อความ,สติ๊กเกอร์
   if (event.type === 'message') {
     const message = event.message;
-    console.log(event)
+     console.log(event)
+    //console.log(message)
 
     client.replyMessage(event.replyToken, {
       type: 'text',
