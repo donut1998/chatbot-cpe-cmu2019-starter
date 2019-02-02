@@ -7,20 +7,24 @@ const config = {
   channelSecret: '1614fdc372087e9c6a6fc36829fad2f2'
 }
 
+const client = new Client(config)
+
 app.get('/', function (req, res) {
     res.send('Hello World!!')
-    const event = req.body.events[0];
-    if (event.type === 'message') {
-      const message = event.message;
-      client.replyMessage(event.replyToken, {
-        type: 'text',
-        text: message,
-      })
-    }
+   
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
   res.send('Hello World!!')
+  const event = req.body.events[0];
+    
+  if (event.type === 'message') {
+    const message = event.message;
+    client.replyMessage(event.replyToken, {
+      type: 'text',
+      text: message,
+    })
+  }
 })
 
 app.set('port', (process.env.PORT || 4000))
